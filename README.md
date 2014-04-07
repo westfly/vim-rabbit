@@ -1,2 +1,3 @@
-addon.vim
+vim-rabbit
 =========
+include some highlight plugin & snippets
