@@ -1,41 +1,33 @@
 # pwd=`strpart(getcwd(), '\S+\w+\/proto')`
 snippet dproto
 	proto_library(name = '${1:`get(split(getcwd(),'/'), -2)`}_proto',
-							 srcs = ['$1.proto'],
-							 deps = [],
-							 gen_cpp = 1,
+				  srcs = ['$1.proto'],
+				  deps = [],
+				  gen_cpp = 1,
 	)
 snippet dthrift
 	thrift_library(name = '${1:`get(split(getcwd(),'/'), -2)`}_thrift',
-							   srcs = ['$1.thrift'],
-								 deps = [],
-								 gen_cpp = 1,
+				   srcs = ['$1.thrift'],
+				   deps = [],
+				   gen_cpp = 1,
 	)
 snippet dplib
-	cc_public_library(name = 'parser' ,
-										srcs = [''
-										] ,
-										implements = [
-										] ,
+	cc_public_library(name = 'parser',
+					  srcs = [''],
+					  implements = [],
 	)
 snippet dlib
 	cc_library(name = '',
-						 srcs = ['',
-						 ],
-						 deps = ['',
-						 ]
+			   srcs = [''],
+			   deps = [''],
 	)
 snippet dbin
 	cc_binary(name = '',
-						srcs = ['',
-						],
-						deps =['',
-						]
+			  srcs = [''],
+			  deps = [''],
 	)
 snippet dtest
 	cc_test(name = '',
-					srcs = ['',
-					],
-					deps =['',
-					]
+		    srcs = [''],
+		    deps =[''],
 	)
